@@ -9,3 +9,10 @@ To load the build in terminal
 
 To run the build in terminal
 - docker run --rm -p 8080:80 class_website
+
+### c344_amd64.tar.gz
+To load the build in terminal
+- docker load -i c344_amd64.tar.gz
+
+To run the build in terminal
+- docker run --rm -p 8080:80 c344_amd64:latest
