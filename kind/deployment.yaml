@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: class-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: class-website
+  template:
+    metadata:
+      labels:
+        app: class-website
+    spec:
+      containers:
+        - name: class-website
+          image: c344_amd64:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
