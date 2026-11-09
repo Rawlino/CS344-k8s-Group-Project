@@ -1,7 +1,22 @@
 # CS344-k8s-Group-Project
 CS344 group project to create a 3 node KIND k8s cluster.
 
+## Identification
+- Team number: ###
+- Team name: Giff & Sons
+- Team members:
+   - Connor Phelps
+   - Gifferent Malquist
+   - Lucas Lima
+   - Caleb Dew
+   - Sechan Jang
+   - Orion Rawlings
+- Project name: K8S Class Website
 
+## Introduction
+This project is a docker image of the Cybersecurity 344 class website that runs using KIND (Kubernetes in Docker). Its primary user-facing function is to serve the website.
+
+The benefits of this project compared to a normal web server are mostly on the backend. This project provides load balancing and self healing. Load balancing decreases latency for users by distributing the network traffic across multiple nodes. Self healing enables the server to restart unresponsive/damaged nodes.
 
 
 ### c344_amd64.tar.gz
@@ -45,6 +60,7 @@ To run the build in terminal
    ```bash
    kubectl port-forward service/class-website 8080:80
    ```
+   This tells kubernetes to make the website accessible on port 80
 
 7. To remove the cluster when finished:
    ```bash
