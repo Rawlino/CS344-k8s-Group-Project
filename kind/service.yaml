@@ -1,0 +1,23 @@
+#This file contains the class website to route to each pod in the worker nodes
+
+apiVersion: v1
+kind: Service
+metadata:
+  #Name of the service to be run
+  name: class-website
+  
+#Tells us how the service should work
+spec:
+  selector:
+    # This tells the service which pods to send traffic to
+    app: class-website
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+
+  # To make sure you can access the website, use this command
+  # kubectl port-forward service/class-website 8080:80
+  # this tells kubernetes to make the website accessible on port 80
+  # then open on http://localhost:8080
