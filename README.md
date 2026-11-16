@@ -66,3 +66,31 @@ To run the build in terminal
    ```bash
    kind delete cluster --name group-cluster
    ```
+
+
+
+
+
+
+
+
+
+
+### Orion's Demo Notes
+
+
+Getting started
+* Make sure 2 terminal tabs are open (or 2 terminal windows)
+* In one, enter the command 'kubectl get pods -o wide -w' (this will give a live running update of the status of the nodes)
+
+Testing Failure (In other terminal window)
+* Enter command 'kubectl get pods -o wide' to get node id
+* Enter command 'kubectl delete pod <node id>'
+* Look at other window running the live status of the nodes to see the destruction and creation of a new node.
+
+Testing Scaling
+* Enter command 'kubectl scale deployment class-website --replicas=3'
+* Now enter command 'kubectl get pods -o wide' to see that we now have 3 working nodes housing our website
+* Enter command 'kubectl scale deployment class-website --replicas=2' to return to original configuration (use 'kubectl get pods -o wide' to showcase this again)
+
+Testing working node failure (Deliberate on whether this is necessary)
