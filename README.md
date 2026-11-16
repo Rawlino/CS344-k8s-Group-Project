@@ -18,6 +18,7 @@ This project is a docker image of the Cybersecurity 344 class website that runs 
 
 The benefits of this project compared to a normal web server are mostly on the backend. This project provides load balancing and self healing. Load balancing decreases latency for users by distributing the network traffic across multiple nodes. Self healing enables the server to restart unresponsive/damaged nodes.
 
+## Documentation
 
 ### c344_amd64.tar.gz
 To load the build in terminal
@@ -67,7 +68,31 @@ To run the build in terminal
    kind delete cluster --name group-cluster
    ```
 
+## Creation
+### Goal
+The goal of this project was to learn how to use KIND to create a server that implements many useful features for real-world servers.
 
+### Process
+We split the project into multiple different pieces including:
+
+- Creating the `service.yaml`.
+- Developing the demo to test the server.
+- Creating the slides.
+- Writing the documentation.
+
+### Challenges
+[Place challenges here]
+
+### Sources
+- [Kubernetes documentation](https://kubernetes.io/)
+- [That video]
+
+### Tools
+- Docker
+- KIND
+- Kubernetes
+- Visual Studio Code
+- Github
 
 
 
