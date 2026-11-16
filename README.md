@@ -92,5 +92,3 @@ Testing Scaling
 * Enter command 'kubectl scale deployment class-website --replicas=3'
 * Now enter command 'kubectl get pods -o wide' to see that we now have 3 working nodes housing our website
 * Enter command 'kubectl scale deployment class-website --replicas=2' to return to original configuration (use 'kubectl get pods -o wide' to showcase this again)
-
-Testing working node failure (Deliberate on whether this is necessary)
