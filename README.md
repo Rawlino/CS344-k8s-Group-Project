@@ -20,15 +20,23 @@ The benefits of this project compared to a normal web server are mostly on the b
 
 ## Documentation
 
-### c344_amd64.tar.gz
+### Summary
+This project uses KIND to run a k8s cluster on Docker. The website is bundled in an image called `c344_amd64.tar.gz`. Launching `cluster.yaml` launches the k8s cluster 
+
+### How to run the project
+
+#### c344_amd64.tar.gz
 To load the build in terminal
-- docker load -i c344_amd64.tar.gz
+```bash
+docker load -i c344_amd64.tar.gz
+```
 
 To run the build in terminal
-- docker run --rm -p 8080:80 c344_amd64:latest
+```bash
+docker run --rm -p 8080:80 c344_amd64:latest
+```
 
-
-### To launch the cluster.yaml
+#### To launch the cluster.yaml
 
 1. Load the tar into local Docker:
    ```bash
@@ -68,6 +76,13 @@ To run the build in terminal
    kind delete cluster --name group-cluster
    ```
 
+### Concepts taught
+This project can help teach the following:
+- Using Docker
+- Kubernetes integration with Docker (KIND)
+- How web servers work
+- Certain Kubernetes web server features
+
 ## Creation
 ### Goal
 The goal of this project was to learn how to use KIND to create a server that implements many useful features for real-world servers.
@@ -85,7 +100,8 @@ We split the project into multiple different pieces including:
 
 ### Sources
 - [Kubernetes documentation](https://kubernetes.io/)
-- [That video]
+- ["Kubernetes Explained in 6 Minutes" by ByteByteGo](https://www.youtube.com/watch?v=TlHvYWVUZyc)
+- [KIND Documentation](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
 ### Tools
 - Docker
@@ -93,6 +109,7 @@ We split the project into multiple different pieces including:
 - Kubernetes
 - Visual Studio Code
 - Github
+- yaml
 
 
 
