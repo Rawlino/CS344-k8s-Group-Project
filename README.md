@@ -90,13 +90,16 @@ The goal of this project was to learn how to use KIND to create a server that im
 ### Process
 We split the project into multiple different pieces including:
 
-- Creating the `service.yaml`.
+- Creating the `service.yaml`, `cluster.yaml`, `deployment.yaml`.
 - Developing the demo to test the server.
 - Creating the slides.
 - Writing the documentation.
 
 ### Challenges
 [Place challenges here]
+ - Testing pod failure vs node failure and attempting to fit both in demo time (couldn't).
+ - Figuring out comapitbility for hosting the site across both ARM and AMD devices
+ - Initially learning KIND documentation as well as the kubectl command library. 
 
 ### Sources
 - [Kubernetes documentation](https://kubernetes.io/)
@@ -118,7 +121,7 @@ We split the project into multiple different pieces including:
 
 
 
-### Orion's Demo Notes
+### Orion's Demo Notes (Feel free to move and change to reflect Troubleshooting Stratetgies or something, idk)
 
 
 Getting started
