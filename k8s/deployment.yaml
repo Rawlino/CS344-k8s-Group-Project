@@ -17,4 +17,22 @@ spec:
           image: c344_amd64:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - name: http
+              containerPort: 80
+          # This makes sure that Apache is still running by checking http. If not, restart pod.
+          # To test, run "kubectl exec -it <podname> -c class-website -- /bin/sh", then "httpd -k stop"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          # This makes sure k8s doesn't direct traffic to a pod that is inaccessible
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 2
