@@ -98,8 +98,9 @@ We split the project into multiple different pieces including:
 ### Challenges
 [Place challenges here]
  - Testing pod failure vs node failure and attempting to fit both in demo time (couldn't).
- - Figuring out comapitbility for hosting the site across both ARM and AMD devices
+ - Figuring out compatibility for hosting the site across both ARM and AMD devices
  - Initially learning KIND documentation as well as the kubectl command library. 
+ - Testing Apache down detection and subsequent pod restart.
 
 ### Sources
 - [Kubernetes documentation](https://kubernetes.io/)
